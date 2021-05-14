@@ -1,2 +1,2 @@
 # MCDFinder
-Finds MCD between two integers using Euclid's algorithm
+Finds MCD (Greatest Common Divisor) between two integers using Euclid's algorithm
