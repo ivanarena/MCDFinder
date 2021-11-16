@@ -3,9 +3,9 @@ using namespace std;
 
 void euclid(int x, int y);
 
-int mcd;
+int gcd;
 
-// Given two integers, find their MCD using Euclid's algorithm
+// Given two integers, find their GCD using Euclid's algorithm
 int main()
 {
     int x, y;
@@ -16,14 +16,14 @@ int main()
     } while (x == 0 && y == 0); // (x,y) != (0,0)
 
     if (x == 0) {
-        mcd = y;
+        gcd = y;
     } else if (y == 0) {
-        mcd = x;        
+        gcd = x;        
     } else {
         euclid(x,y);
     }
 
-    cout << "MCD(" << x << ", " << y << ") = " << mcd << endl;
+    cout << "GCD(" << x << ", " << y << ") = " << gcd << endl;
     return 0;
 }
 
@@ -32,7 +32,7 @@ void euclid(int a, int b)
     int r;
     r = a % b;
     if (r == 0) {
-        mcd = b; 
+        gcd = b; 
     } else {
         a = b;
         b = r;
