@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
 
-void euclid(int x, int y);
-
-int gcd;
+int euclid(int x, int y);
 
 // Given two integers, find their GCD using Euclid's algorithm
 int main()
 {
     int x, y;
-
+    int gcd;
+    
     do {    
         cout << "Enter two integers:" << endl;
         cin >> x >> y;
@@ -20,22 +19,22 @@ int main()
     } else if (y == 0) {
         gcd = x;        
     } else {
-        euclid(x,y);
+        gcd = euclid(x,y);
     }
 
     cout << "GCD(" << x << ", " << y << ") = " << gcd << endl;
     return 0;
 }
 
-void euclid(int a, int b)
+int euclid(int a, int b)
 {
     int r;
     r = a % b;
     if (r == 0) {
-        gcd = b; 
+        return b; 
     } else {
         a = b;
         b = r;
-        euclid(a,b);
+        return euclid(a,b);
     }
 }
